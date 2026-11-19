@@ -2,14 +2,14 @@ public class Assignment01Q02 {
     public static void main(String[] args) {
         double actualPi = Math.PI;
         double approxPi = 0;
+        int num = Integer.parseInt(args[0]) ;
 
-        /////////////////////////////////////////////
-        // TODO: Fill in the Pi approxiamtion here
-        /////////////////////////////////////////////
-        /// ...
-        
-        
-        /////////////////////////////////////////////
+        for (double i = 1 ; i <= num ; i++) {
+            if (i % 2 != 0) {approxPi += 1/(2 * i - 1) ;}
+            else {approxPi -= 1/(2 * i - 1) ;}
+        }
+
+        approxPi *= 4 ;
         
         System.out.println(approxPi + " " + actualPi);
     }
